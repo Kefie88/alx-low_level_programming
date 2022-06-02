@@ -1,1 +1,1 @@
-This is my first c readme
+My first programming readme
