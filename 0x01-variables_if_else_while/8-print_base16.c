@@ -14,7 +14,7 @@ int main(void)
 	{
 		if (n < 10)
 		{
-			puchar(n + '0');
+			putchar(n + '0');
 		}
 		else
 		{
