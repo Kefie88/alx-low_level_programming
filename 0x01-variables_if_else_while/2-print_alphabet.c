@@ -4,7 +4,7 @@
  * main - entry point
  * Description - print lower case letters
  * Return: always 0
- * */
+ */
 int main ()
 {
 	char c;
