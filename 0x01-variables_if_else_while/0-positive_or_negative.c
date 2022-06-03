@@ -4,7 +4,7 @@
 /* more headers goes there */
 /**
  * main - entry point
- * Description - identify whether the random generated number is positive, negative or zero
+ * Description - identify the random generated number is positive, negative or zero
  * Return: Always 0
  */
 int main(void)
