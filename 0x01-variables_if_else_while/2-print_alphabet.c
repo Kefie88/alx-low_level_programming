@@ -5,7 +5,7 @@
  * Description - print lower case letters
  * Return: always 0
  */
-int main ()
+int main (void)
 {
 	char c;
 	for (c = 'a'; c<= 'z'; c++)
