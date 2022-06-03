@@ -5,7 +5,7 @@
  * description - prints lowercase alphabets in reverse
  * Return: always 0
  */
-int maint(void)
+int main(void)
 {
 	char c;
 
