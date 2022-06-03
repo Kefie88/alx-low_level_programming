@@ -4,7 +4,7 @@
 /* more headers goes there */
 /**
  * main - entry point
- * Description - identify the random generated number is positive, negative or zero
+ * Description - identify if the random generated number is +ve, -ve or zero
  * Return: Always 0
  */
 int main(void)
@@ -12,7 +12,7 @@ int main(void)
 	int n;
 
 	srand(time(0));
-	n = rand() - RAND_MAX / 2;	
+	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 		printf("%d is positive\n", n);
 	else if (n == 0)
