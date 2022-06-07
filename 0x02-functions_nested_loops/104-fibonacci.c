@@ -11,9 +11,9 @@ int main(void)
 
 	printf("%ld, ", f1);
 	printf("%ld, ", f2);
-	while (i < 97)
+	while (i < 96)
 	{
-		if (i == 96)
+		if (i == 95)
 		{
 			printf("%ld", next);
 		}
