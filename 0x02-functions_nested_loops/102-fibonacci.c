@@ -10,12 +10,19 @@ int main(void)
 	long int f1 = 0, f2 = 1, next;
 
 	next = f1 + f2;
-	while (n<= 50)
+	while (n <= 50)
 	{
-		printf("%ld, ", next);
-		f1 = f2;
-		f2 = next;
-		next = f1 + f2;
+		if (n == 50)
+		{
+			printf("%ld", next);
+		}
+		else
+		{
+			printf("%ld, ", next);
+			f1 = f2;
+			f2 = next;
+			next = f1 + f2;
+		}
 		n++;
 	}
 	printf("\n");
