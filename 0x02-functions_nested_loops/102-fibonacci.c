@@ -6,7 +6,8 @@
  */
 int main(void)
 {
-	int f1 = 0, f2 = 1, next = 0, n = 1;
+	int f1 = 0, f2 = 1, n = 1;
+	long int next;
 
 	next = f1 + f2;
 	while (n<= 50)
@@ -17,5 +18,6 @@ int main(void)
 		next = f1 + f2;
 		n++;
 	}
+	printf("\n");
 	return (0);
 }
