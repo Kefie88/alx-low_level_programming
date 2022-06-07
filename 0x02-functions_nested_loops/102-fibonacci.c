@@ -6,13 +6,13 @@
  */
 int main(void)
 {
-	int f1 = 0, f2 = 1, n = 1;
-	long int next;
+	int n = 1;
+	long int f1 = 0, f2 = 1, next;
 
 	next = f1 + f2;
 	while (n<= 50)
 	{
-		printf("%d, ", next);
+		printf("%ld, ", next);
 		f1 = f2;
 		f2 = next;
 		next = f1 + f2;
