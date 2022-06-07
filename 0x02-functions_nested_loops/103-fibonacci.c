@@ -12,7 +12,10 @@ int main(void)
 		next = f1 + f2;
 		f1 = f2;
 		f2 = next;
-		sum = sum + (f2 % 2 == 0) ? f2 : 0;
+		if (f2 % 2 == 0)
+		{
+			sum = sum + f2;
+		}
 	}
 	printf("%ld\n", sum);
 	return (0);
