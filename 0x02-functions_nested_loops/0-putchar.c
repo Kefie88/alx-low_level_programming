@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 /**
  * main - entry point
  * Description - prints _putchar
@@ -6,7 +6,14 @@
  */
 int main(void)
 {
-	_putchar('_');
-	_putchar('p');
+	int i = 0;
+	char ch [] = "_putchar";
+
+	while (i < 8)
+	{
+		_putchar(ch [i]);
+		i++;
+	}
+	_putchar('\n');
 	return (0);
 }
