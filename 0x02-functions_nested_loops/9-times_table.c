@@ -4,11 +4,12 @@
  */
 void times_table(void)
 {
-	int i, j;
+	int i, j, n = 100;
 
-	for (i = 0; i < 10; i++)
+	n = n / 10;
+	for (i = 0; i < n; i++)
 	{
-		for (j = 0; j < 10; j++)
+		for (j = 0; j < n; j++)
 		{
 			_putchar(i * j + '0');
 			if (j < 9)
