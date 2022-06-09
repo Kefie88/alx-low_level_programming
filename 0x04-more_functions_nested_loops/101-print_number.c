@@ -6,7 +6,7 @@
  */
 void print_number(int n)
 {
-	long int len, rem, tmp, i, exp;
+	long len, rem, tmp, i, exp;
 
 	rem = n;
 	exp = len = 1;
