@@ -6,10 +6,8 @@
  */
 void print_number(int n)
 {
-	long len, rem, tmp, i, exp;
+	int len = 1, rem = n, tmp, i, exp = 1;
 
-	rem = n;
-	exp = len = 1;
 	if (rem < 0)
 	{
 		rem = rem * -1;
