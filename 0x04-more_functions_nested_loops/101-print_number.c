@@ -13,7 +13,7 @@ void print_number(int n)
 	if (rem < 0)
 	{
 		rem = rem * -1;
-		_putchar('_');
+		_putchar('-');
 	}
 	tmp = rem;
 	while (tmp >= 10)
