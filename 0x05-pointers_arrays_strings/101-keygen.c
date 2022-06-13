@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <mat.h>
+#include <math.h>
 /**
  * main - prints password crack
  * Return: 0
