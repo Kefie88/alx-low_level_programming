@@ -1,9 +1,5 @@
 #include <stdio.h>
-/**
- * main - entry point
- * description - prints a[2] = 98, followed by a new line
- * Return: returns o
- */
+
 int main(void)
 {
 	int n;
