@@ -8,11 +8,11 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, len1, len2;
+	int i = 0, j = 0, len1, len2;
 
-	while (*dest != '\0')
+	while (dest[i])
 		len1++;
-	while (*src != '\0')
+	while (src[j])
 		len2++;
 	if ( len2 >= n)
 	{
@@ -23,7 +23,6 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		for (i = 0; i < len2; i++, len1++)
 			*(dest + len1) = *(src + i);
-		*(dest + len1 + 1) = '\0';
 	}
 	return (dest);
 }
