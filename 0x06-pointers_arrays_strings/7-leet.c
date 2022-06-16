@@ -1,9 +1,10 @@
 #include "main.h"
 /**
  * leet - function that encodes a string into 1337
+ * @str: String to be encoded
  * Return: encoded string
  */
-char *leet(char * str)
+char *leet(char *str)
 {
 	int i, j;
 	char Code[] = {'a', 'e', 'o', 't', 'l'};
