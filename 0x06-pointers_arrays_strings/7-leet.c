@@ -14,9 +14,9 @@ char *leet(char *str)
 	{
 		for (i = 0; i < 5; i++)
 		{
-			if (*(str + i) == Code[i] || *(str + i) == Code[i] - 32)
+			if (str[i] == Code[i] || str[i] == Code[i] - 32)
 			{
-				*(str + i) = 48 + Encode[i];
+				str[i] = 48 + Encode[i];
 			}
 		}
 	}
