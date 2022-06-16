@@ -17,12 +17,12 @@ char *_strncat(char *dest, char *src, int n)
 	if (len2 >= n)
 	{
 		for (i = 0; i < n; i++, len1++)
-			*(dest + len1) = *(src + i);
+			*(dest + len1) = src[i];
 	}
 	else
 	{
 		for (i = 0; i < len2; i++, len1++)
-			*(dest + len1) = *(src + i);
+			*(dest + len1) = src[i];
 	}
 	return (dest);
 }
