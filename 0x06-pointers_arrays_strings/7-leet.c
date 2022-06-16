@@ -7,18 +7,16 @@
 char *leet(char *str)
 {
 	int i, j;
-	char Code[] = "oOlLeEaAtT";
-	char Encode[] = "0011334477";
+	char Code[] = {'o', 'l', '?', 'e', 'a', '?', '?', 't'};
 
-	for (j = 0; str[j] != '\0'; j++)
+	while (str[j])
 	{
-		for (i = 0; i < 5; i++)
+		for (i = 0; i < 8; i++)
 		{
-			if (str[j] == Code[i])
-			{
-				str[j] = Encode[i];
-			}
+			if (str[j] == Code[i] || str[j] == Code[i] - 32)
+				str[j] = i + '0';
 		}
+		j++;
 	}
 	return (str);
 }
