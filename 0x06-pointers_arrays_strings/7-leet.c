@@ -7,8 +7,8 @@
 char *leet(char *str)
 {
 	int i, j;
-	char Code[] = {'a', 'e', 'o', 't', 'l'};
-	int Encode[] = {4, 3, 0, 7, 1};
+	char Code[] = "aeotl";
+	char Encode[] = "43071";
 
 	for (j = 0; str[j]; j++)
 	{
@@ -16,7 +16,7 @@ char *leet(char *str)
 		{
 			if (str[i] == Code[i] || str[i] == Code[i] - 32)
 			{
-				str[i] = 48 + Encode[i];
+				str[i] = Encode[i] + '0';
 			}
 		}
 	}
