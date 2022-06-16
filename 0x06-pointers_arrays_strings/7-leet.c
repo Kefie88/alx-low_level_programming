@@ -6,7 +6,7 @@
  */
 char *leet(char *str)
 {
-	int i, j;
+	int i, j = 0;
 	char Code[] = {'o', 'l', '?', 'e', 'a', '?', '?', 't'};
 
 	while (str[j])
