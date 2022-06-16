@@ -10,7 +10,7 @@ char *leet(char *str)
 	char Code[] = "aeotl";
 	char Encode[] = "43071";
 
-	for (j = 0; str[j]; j++)
+	for (j = 0; str[j] != '\0'; j++)
 	{
 		for (i = 0; i < 5; i++)
 		{
