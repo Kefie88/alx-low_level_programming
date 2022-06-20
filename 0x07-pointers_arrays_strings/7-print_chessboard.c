@@ -4,7 +4,7 @@
  * @a: pointer array
  * Return: nothing (void)
  */
-void print_chessboard(char (*)[8])
+void print_chessboard(char (*a)[8])
 {
 	unsigned int i, j;
 
