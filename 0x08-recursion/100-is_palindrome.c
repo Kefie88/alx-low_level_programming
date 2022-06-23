@@ -6,5 +6,17 @@
  */
 int is_palindrome(char *s)
 {
-	
+	int i, mid, len;
+
+	while (*s != '\0')
+	{
+		len++;
+	}
+	mid = len / 2;
+	for (i = 0; i < mid; i++)
+	{
+		if (s[i] != s[len - i])
+			return (0);
+	}
+	return (1);
 }
