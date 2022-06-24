@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 {
 	int i, multip = 1;
 
+	(void)argc;
 	if (argc != 3)
 	{
 		printf("Error\n");
