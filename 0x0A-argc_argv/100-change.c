@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 		if (cents >= 25)
 			coins = 25;
 		else if (cents >= 10)
-			coins= 10;
+			coins = 10;
 		else if (cents >= 5)
 			coins = 5;
 		else if (cents >= 2)
