@@ -11,13 +11,12 @@ int main(int argc, char *argv[])
 {
 	int i, multip = 1;
 
-	(void)argc;
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	for (i = 0; i < argc;  i++)
+	for (i = 1; i < argc;  i++)
 	{
 		multip *= atoi(argv[i]);
 	}
