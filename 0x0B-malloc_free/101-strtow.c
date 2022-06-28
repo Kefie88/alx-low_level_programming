@@ -16,6 +16,7 @@ char **strow(char *str)
 		return (NULL);
 	while (str[len])
 		len++;
+	Words = malloc(sizeof(char) * len);
 	for (i = 0; str[i]; i++)
 	{
 		for (j = t; j < len; j++)
