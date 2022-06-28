@@ -21,7 +21,7 @@ char **strow(char *str)
 		for (j = t; j < len; j++)
 		{
 			Words[i][j] = str[j];
-			if (str[j] == " ")
+			if (str[j] == '\0')
 				continue;
 			t++;
 
