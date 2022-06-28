@@ -19,7 +19,7 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	for (i = 0; s1[i] || s2[i]; i++)
 		len++;
-	Concat_string = malloc(sizeof(char) * len);
+	Concat_String = malloc(sizeof(char) * len);
 	if (Concat_String == NULL)
 		return (NULL);
 	for (i = 0; s1[i]; i++)
