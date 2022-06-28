@@ -10,7 +10,7 @@
 char **strow(char *str)
 {
 	int i, j, len = 0, t = 0;
-	char *Words;
+	char **Words;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
