@@ -12,7 +12,7 @@ char **strow(char *str)
 	int i, j, len = 0, t = 0;
 	char *Words;
 
-	if (str == NULL || str == "")
+	if (str == NULL || *str == '\0')
 		return (NULL);
 	while (str[len])
 		len++;
@@ -27,5 +27,6 @@ char **strow(char *str)
 
 		}
 	}
+	Words[t] = '\0';
 	return (Words);
 }
