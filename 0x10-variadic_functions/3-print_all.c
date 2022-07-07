@@ -3,9 +3,12 @@
  * print_char - prints a character
  * @arg: pointer to char
  */
-void print_char(va_list *arg)
+void print_char(va_list arg)
 {
-	printf("%c", va_arg(*arg, int));
+	char alp;
+
+	alp = va_arg(arg, int);
+	printf("%c", alp);
 }
 /**
  * print_int - prints integer
@@ -13,25 +16,31 @@ void print_char(va_list *arg)
  */
 void print_int(va_list arg)
 {
-	printf("%d", va_arg(*arg, int));
+	int num;
+
+	num = va_arg(arg, int);
+	printf("%d", num);
 }
 /**
  * print_float - prints a float data type
  * @arg: pointer to float
  */
-void print_float(va_list *arg)
+void print_float(va_list arg)
 {
-	printf("%f", va_arg(*arg, double));
+	float num;
+
+	num = va_arg(arg, double);
+	printf("%f", num);
 }
 /**
  * print_string - prints string
  * @arg: pointer to a string
  */
-void print_string(va_list *arg)
+void print_string(va_list arg)
 {
 	char *str;
 
-	str = va_arg(*arg, char *);
+	str = va_arg(arg, char *);
 	if (str == NULL)
 	{
 		printf("(nil)");
@@ -40,57 +49,36 @@ void print_string(va_list *arg)
 	printf("%s", str);
 }
 /**
- * get_func - getscorresponding function of format type
- * @fmt_arr: format type array
- * @identifier: format type
- * Return:pointer to function on success or NULL on failure
- */
-void (*get_func(char identifier, struct format_struct *fmt_arr))(va_list *)
-{
-	int i = 0;
-
-	while (fmt_arr[i].format)
-	{
-		if (fmt_arr[i].format == identifier)
-		{
-			return (fmt_arr[i].fmt_print_func);
-		}
-		i++;
-	}
-	return (fmt_arr[i].fmt_print_func);
-}
-/**
  * print_all - prints anything
  * @format: format of input
  * Return: nothing
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int j = 0;
+	va_list lst;
+	int i = 0, j = 0;
 	char *separator = "";
 
-	format_struct_ptr fmt_arr[] = {
-		{'c', print_char},
-		{'i', print_int},
-		{'f', print_float},
-		{'s', print_string},
-		{'\0', NULL}
+	print_t funcs[] = {
+		{"c", print_char},
+		{"i", print_int},
+		{"f", print_float},
+		{"s", print_string}
 	};
-	void (*get_func_ptr)(va_list *);
-	va_list lst;
-
 	va_start(lst, format);
-	while (format && format[j] != '\0')
+	while (format && (*(format + i)))
 	{
-		get_func_ptr = get_func(format[j], fmt_arr);
-		if (get_func_ptr)
+		j = 0;
+		while (j < 4 && (*(foramt + i) != *(funcs[j].symbol)))
+			j++;
+		if (j < 4)
 		{
 			printf("%s", separator);
-			get_func_ptr(&lst);
+			funcs[j].print(lst);
 			separator = ", ";
 		}
-		j++;
+		i++;
 	}
-	va_end(lst);
 	printf("\n");
+	va_end(lst);
 }
