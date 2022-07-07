@@ -1,64 +1,4 @@
 #include "variadic_functions.h"
-void (*get_func(char identifier, struct format_struct *fmt_arr))(va_list *);
-void print_char(va_list *arg);
-void print_int(va_list *arg);
-void print_float(va_list *arg);
-void print_string(va_loist *arg);
-/**
- * print_all - prints any thing
- * @format: list of types of arguments passed to the function
- * Return: nothing
- */
-void print_all(const char * const format, ...)
-{
-	unsigned int j = 0;
-	char *separator = "";
-
-	format_struct_ptr fmt_arr[] = {
-		{'c', print_char},
-		{'i', print_int},
-		{'f', print_float},
-		{'s', print_string},
-		{'\0', NULL}
-	};
-	void (*get_func_ptr)(va_list *);
-	va_list lst;
-
-	va_start(lst, format);
-	while (format && format[j] != '\0')
-	{
-		get_func_ptr = get_func(format[j], fmt_arr);
-		if (get_func_ptr)
-		{
-			print("%s", separator);
-			get_func_ptr(&lst);
-			separator = ", ";
-		}
-		j++;
-	}
-	va_end(lst);
-	printf("\n");
-}
-/**
- * get_func - get corresponding function of format type
- * @fmt_arr: format types array
- * @identifier: format type
- * Return: pointer to function (success) or NULL
- */
-void (*get_func(char identifier, struct format_struct *fmt_arr))(va_list *)
-{
-	int i = 0;
-
-	while (fmt_arr[i].format)
-	{
-		if (fmt_arr[i].format == identifier)
-		{
-			return (fmt_arr[i].fmt_print_func);
-		}
-		i++;
-	}
-	return (fmt_arr[i].fmt_print_func);
-}
 /**
  * print_char - prints a character
  * @arg: pointer to char
@@ -98,4 +38,38 @@ void print_string(va_list *arg)
 		return;
 	}
 	printf("%s", str);
+}
+/**
+ * print_all - prints anything
+ * @format: format of input
+ * Return: nothing
+ */
+void print_all(const char * const format, ...)
+{
+	va_list lst;
+	int i = 0, j = 0;
+	char *separator = "";
+
+	print_t func[] = {
+		{"c", print_char},
+		{"i", print_int},
+		{"f", print_float},
+		{"s", print_string}
+	};
+	va_start(lst, format);
+	while (format && (*(format + i)))
+	{
+		j = 0;
+		while (j < 4 && (*(format + i) != *(func[j].symbol)))
+			j++
+		if (j < 4)
+		{
+			printf("%s", separator);
+			func[j].print(lst);
+			separator = ", ";
+		}
+		i++;
+	}
+	printf("\n");
+	va_end(lst);
 }
