@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	funptr = get_op_func(argv[2]);
 	if (!funptr)
 	{
-		print("Error\n");
+		printf("Error\n");
 		exit(99);
 	}
 	num1 = atoi(argv[1]);
