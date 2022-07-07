@@ -11,9 +11,9 @@ void print_char(va_list *arg)
  * print_int - prints integer
  * @arg: pointer to int
  */
-void print_int(va_list *arg)
+void print_int(va_list arg)
 {
-	printf("%d", va_arg(*arg, int);
+	printf("%d", va_arg(*arg, int));
 }
 /**
  * print_float - prints a float data type
@@ -21,7 +21,7 @@ void print_int(va_list *arg)
  */
 void print_float(va_list *arg)
 {
-	printf("%f", va_arg(*arg, double);
+	printf("%f", va_arg(*arg, double));
 }
 /**
  * print_string - prints string
