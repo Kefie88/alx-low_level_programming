@@ -43,7 +43,7 @@ void print_all(const char * const format, ...)
  * get_func - get corresponding function of format type
  * @fmt_arr: format types array
  * @identifier: format type
- * Retunr: pointer to function (success) or NULL
+ * Return: pointer to function (success) or NULL
  */
 void (*get_func(char identifier, struct format_struct *fmt_arr))(va_list *)
 {
