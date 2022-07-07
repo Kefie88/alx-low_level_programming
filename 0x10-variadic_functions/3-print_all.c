@@ -59,7 +59,7 @@ void print_all(const char * const format, ...)
 	int i = 0, j = 0;
 	char *separator = "";
 
-	print_t funcs[] = {
+	printer_t funcs[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
@@ -69,7 +69,7 @@ void print_all(const char * const format, ...)
 	while (format && (*(format + i)))
 	{
 		j = 0;
-		while (j < 4 && (*(foramt + i) != *(funcs[j].symbol)))
+		while (j < 4 && (*(format + i) != *(funcs[j].symbol)))
 			j++;
 		if (j < 4)
 		{
