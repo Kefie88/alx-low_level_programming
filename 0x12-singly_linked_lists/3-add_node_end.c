@@ -10,7 +10,7 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *tmp, *tmp1;
 	char *cop;
-	unsigned int length = 0;
+	int len;
 
 	tmp = malloc(sizeof(list_t));
 	if (tmp == NULL)
@@ -21,19 +21,21 @@ list_t *add_node_end(list_t **head, const char *str)
 		free(tmp);
 		return (NULL);
 	}
-	while (str[lenght] != '\0')
-		length++;
+	for (len = 0; str[len];)
+		len++;
 	tmp-str = cop;
-	tmp->length = length;
+	tmp->len = len;
 	tmp->next = NULL;
 	if (*head == NULL)
 	{
 		*head = tmp;
-		return (tmp);
 	}
-	tmp1 = *head;
-	while (tmp1->next != NULL)
-		tmp1 = tm1->next;
-	tmp1->next = tmp;
-	return (tmp);
+	else
+	{
+		tmp1 = *head;
+		while (tmp1->next != NULL)
+			tmp1 = tm1->next;
+		tmp1->next = tmp;
+	}
+	return (head);
 }
