@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 /**
  * add_node_end - adds new node at the end of a list_t list
  * @head: pointer to the first node in the list

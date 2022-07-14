@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 /**
  * free_list - frees a list_t list
  * @head: pointer to the first node in a list
