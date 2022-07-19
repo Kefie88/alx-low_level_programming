@@ -1,4 +1,4 @@
-nclude "lists.h"
+#include "lists.h"
 /**
  * print_listint_safe - prints a listint_t linked list safely
  * @head: list of type listint_t to be print
@@ -13,7 +13,7 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		diff = head - head->next;
 		num++;
-		printf("[%p]\n", (void *)head, head->n);
+		printf("[%p] %d\n", (void *)head, head->n);
 		if (diff > 0)
 			head = head->next;
 		else
