@@ -3,7 +3,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-typedef struct printer{
+/**
+ * struct printer - printer structure
+ * @symbol: symbol
+ * @print: print argument
+ */
+typedef struct printer
+{
 	char *symbol;
 	void (*print)(va_list arg);
 } printer_t;
