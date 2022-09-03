@@ -4,20 +4,20 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * struct distint_s - doubly linked list
+ * struct dlistint_s - doubly linked list
  * @n: integer
  * @prev: points to the previous node
  * @next: points to the next node
  * Description: Doubly Linked List node structure
  * for ALX Project
  */
-typedef struct distint_s
+typedef struct dlistint_s
 {
 	int n;
-	struct distint_s *prev;
-	struct distint_s *next;
-} distint_t;
-size_t print_distint(const distint_t *h);
+	struct dlistint_s *prev;
+	struct dlistint_s *next;
+} dlistint_t;
+size_t print_dlistint(const dlistint_t *h);
 size_t dlistint_len(const dlistint_t *h);
 dlistint_t *add_dnodeint(dlistint_t **head, const int n);
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);

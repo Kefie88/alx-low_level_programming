@@ -1,10 +1,10 @@
 #include "lists.h"
 /**
- * print_distint - print all the elements of a list
+ * print_dlistint - print all the elements of a list
  * @h: pointer to the start of linked list
  * Return: number of nodes
  */
-size_t print_distint(const dist_t *h)
+size_t print_dlistint(const dlistint_t *h)
 {
 	size_t i;
 
