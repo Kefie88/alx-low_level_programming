@@ -10,7 +10,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 {
 	skiplist_t *go;
 
-	if (list ==NULL)
+	if (list == NULL)
 		return (NULL);
 	go = list;
 	do {
